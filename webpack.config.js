@@ -32,18 +32,25 @@ module.exports = (env = {}) => {
     },
     plugins: [
       new CleanWebpackPlugin(["build"]),
-      new HtmlWebpackPlugin({
-        title: "WC-SDDF",
-        template: path.resolve(__dirname, "src/index.html"),
-        filename: path.resolve(__dirname, "build/index.html"),
-        inject: false
-      })
-      ,
+      // new HtmlWebpackPlugin({
+      //   template: path.resolve(__dirname, "src/index.html"),
+      //   filename: path.resolve(__dirname, "build/index.html"),
+      //   inject: false
+      // }),
+      // new HtmlWebpackPlugin({
+      //   template: path.resolve(__dirname, "src/example1.html"),
+      //   filename: path.resolve(__dirname, "build/example1.html"),
+      //   inject: false
+      // }),
       new CopyWebpackPlugin([{
         from: path.resolve(__dirname,
           "node_modules/@webcomponents/webcomponentsjs/*.js"
         ),
         to: "node_modules/@webcomponents/webcomponentsjs/[name].[ext]"
+      }]),
+      new CopyWebpackPlugin([{
+        from: path.resolve(__dirname, "src/*.html"),
+        to: "[name].[ext]"
       }])
     ]
   };

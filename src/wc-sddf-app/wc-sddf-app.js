@@ -19,7 +19,7 @@ class WcSddfApp extends LitElement {
      */
     _render({foo, state}) {
         return html`
-            <h1>WC-SDDF-APPs</h1>           
+            <h1>WC-SDDF-APP</h1>           
         `;
     }
 }

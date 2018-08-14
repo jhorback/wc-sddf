@@ -4,7 +4,7 @@
   "license": "0BSD",
   "scripts": {
     "start": "yarn serve | yarn watch",
-    "serve": "webpack-dev-server --env.devServer",
+    "serve": "webpack-dev-server --env.devServer | yarn build",
     "watch": "concurrently --kill-others \"yarn css --watch\" \"yarn wp:serve\"",
     "build": "webpack",
     "css": "node --experimental-modules scripts/css.mjs"    
