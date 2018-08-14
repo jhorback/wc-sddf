@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+    <title>WC SDDF</title>
+
+    <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+    <script>
+      (function() {      
+        document.addEventListener('WebComponentsReady', function componentsReady () {
+          document.removeEventListener('WebComponentsReady', componentsReady);    
+          var script = document.createElement('script');
+          script.src = '/app.bundle.js';
+          document.head.appendChild(script);
+
+
+          var script = document.createElement('script');
+          script.src = '/vendors~app.bundle.js';
+          document.head.appendChild(script);          
+        });
+      })();
+    </script>
+
+    <style>
+      body {
+        margin: 0;
+        font-family: "Roboto", "Noto", sans-serif;
+        line-height: 1.5;
+        min-height: 100vh;
+        background-color: #eeeeee;
+      }
+    </style>
+  </head>
+  <body>
+    <wc-sddf-app></wc-sddf-app>
+  </body>
+</html>
