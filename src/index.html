@@ -10,15 +10,15 @@
     <script>
       (function() {      
         document.addEventListener('WebComponentsReady', function componentsReady () {
-          document.removeEventListener('WebComponentsReady', componentsReady);    
-          var script = document.createElement('script');
-          script.src = '/app.bundle.js';
-          document.head.appendChild(script);
+          document.removeEventListener('WebComponentsReady', componentsReady);
 
+          const vendorScript = document.createElement('script');
+          vendorScript.src = '/vendors~app.bundle.js';
+          document.head.appendChild(vendorScript); 
 
-          var script = document.createElement('script');
-          script.src = '/vendors~app.bundle.js';
-          document.head.appendChild(script);          
+          const appScript = document.createElement('script');
+          appScript.src = '/app.bundle.js';
+          document.head.appendChild(appScript);                   
         });
       })();
     </script>

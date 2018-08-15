@@ -9,27 +9,53 @@ module.exports = (env = {}) => {
 
   return {
     mode: "development",
-    devtool: "inline-source-map",
+    //devtool: "inline-source-map",
     devServer: {
       contentBase: "./build",
       port: 3023
     },
+    
     entry: {
-      app: "./src/wc-sddf-app/wc-sddf-app.js"
+      app: ["babel-polyfill", "./src/wc-sddf-app/wc-sddf-app.js"]
     },
+    
     output: {
       filename: "[name].bundle.js",
       path: path.resolve(__dirname, "./build"),
       publicPath: "/"
     },
+    
     optimization: {
       splitChunks: {
         chunks: "all"
       }
     },
+    
     resolve: {
       modules: [path.resolve(__dirname, "node_modules")]
     },
+    
+    module: {
+      rules:[{
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+          options: {
+            modules: false,
+            "presets": [
+              ["env", {
+                modules: false,
+                "targets": {
+                  "browsers": ["ie 11"]
+                }
+              }]
+            ]              
+          }
+        }
+      }]
+    },
+
     plugins: [
       new CleanWebpackPlugin(["build"]),
       // new HtmlWebpackPlugin({

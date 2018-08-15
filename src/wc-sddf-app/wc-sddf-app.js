@@ -1,6 +1,7 @@
 import {LitElement, html} from '@polymer/lit-element/lit-element.js';
 
 class WcSddfApp extends LitElement {
+//class WcSddfApp extends HTMLElement {
     static get properties() {
         return {
             foo: String,
@@ -11,6 +12,17 @@ class WcSddfApp extends LitElement {
     constructor() {
         super();
         this.state = {};
+        this.test();
+    }
+
+    async test() {
+        const foo = await this.testDeconstruction({foo:"bar"});
+        console.log("testing deconstruction:", foo);
+    }
+
+    async testDeconstruction(params) {
+        const {foo} = params;
+        return foo;
     }
 
     /**

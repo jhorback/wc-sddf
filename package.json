@@ -4,20 +4,25 @@
   "license": "0BSD",
   "scripts": {
     "start": "yarn serve | yarn watch",
-    "serve": "webpack-dev-server --env.devServer | yarn build",
+    "serve": "webpack-dev-server --env.devServer",
     "watch": "concurrently --kill-others \"yarn css --watch\" \"yarn wp:serve\"",
     "build": "webpack",
-    "css": "node --experimental-modules scripts/css.mjs"    
+    "css": "node --experimental-modules scripts/css.mjs"
   },
   "dependencies": {
     "@polymer/app-layout": "^3.0.0-pre.15",
     "@polymer/lit-element": "0.5.2",
     "@polymer/paper-icon-button": "^3.0.0-pre.15",
     "@polymer/polymer": "^3.0.0",
-    "@webcomponents/webcomponentsjs": "^2.0.0"
+    "@webcomponents/webcomponentsjs": "^2.0.0",
+    "babel-polyfill": "7.0.0-beta.3"
   },
   "devDependencies": {
     "@csstools/postcss-sass": "^2.0.0",
+    "babel-cli": "7.0.0-alpha.10",
+    "babel-core": "7.0.0-alpha.10",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "2.0.0-beta.2",
     "clean-webpack-plugin": "^0.1.19",
     "concurrently": "^3.6.0",
     "copy-webpack-plugin": "^4.5.2",
