@@ -42,15 +42,24 @@ module.exports = (env = {}) => {
         use: {
           loader: "babel-loader",
           options: {
-            modules: false,
             "presets": [
-              ["env", {
-                modules: false,
-                "targets": {
-                  "browsers": ["ie 11"]
+              [
+                "env", {
+                  "targets": {
+                    "browsers": [
+                      "last 2 Chrome versions",
+                      //"ie 11"
+                    ]
+                  },
+                  "modules": false
                 }
-              }]
-            ]              
+              ]
+            ],
+            plugins: [
+              "transform-class-properties",
+              "transform-runtime"
+            //  "syntax-dynamic-import"
+            ]
           }
         }
       }]
