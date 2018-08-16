@@ -6,15 +6,25 @@ import {html} from '@polymer/polymer/polymer-element.js';
 
 export const style = html`
 <style>
+/*
+Oranges:
+    #E65100;
+    #DC6B2F;
+
+Grays:
+    #5E6A71
+    #DEDEDE
+*/
 app-header {
-  background-color: #E65100;
+  background-color: #DC6B2F;
   color: white; }
 
 app-toolbar.bottom {
   height: 96px; }
 
 .connect-tech {
-  font-family: Arenq; }
+  font-family: Arenq;
+  margin-right: 1rem; }
 
 .wc-org-logo {
   width: 44px;

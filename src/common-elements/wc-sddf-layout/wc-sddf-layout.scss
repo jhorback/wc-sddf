@@ -1,10 +1,9 @@
+@import "../styles/_common.scss";
 
 $logo-size: 44px;
 
-
 app-header {
-    background-color: #E65100;
-    //background-color: #DC6B2F;
+    background-color: $primary-color;
     color: white;
 }
 
@@ -14,10 +13,7 @@ app-toolbar.bottom {
 
 .connect-tech {
     font-family: Arenq;
-    //font-weight:bold;
-    //color: black;
-    //font-size: 1.23em;
-    // text-shadow: 2px 2px white;
+    margin-right: 1rem;
 }
 
 .wc-org-logo {
