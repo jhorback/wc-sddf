@@ -22,6 +22,7 @@ class CSS {
 
     async process() {
         try {
+            this.clean();
             const paths = await this.getSassFilePaths();
             await this.processSassFiles(paths);
         } catch (error) {
@@ -50,11 +51,28 @@ class CSS {
         }
     }
 
+    async clean() {
+        console.log("css: clean");
+        const files = await this.getGeneratedFilePaths();
+        files.forEach(f => {
+            fs.unlinkSync(f);
+        });
+        console.log("css: finished clean");
+    }
+
     getSassFilePaths() {
         return new Promise((resolve, reject) => {
             glob("src/**/*.scss", {
                 ignore: "src/**/_*.scss",
             }, (err, files) => {
+                err ? reject(err) : resolve(files);
+            });
+        });
+    }
+
+    getGeneratedFilePaths() {
+        return new Promise((resolve, reject) => {
+            glob("src/**/*-css.js", (err, files) => {
                 err ? reject(err) : resolve(files);
             });
         });
@@ -124,4 +142,10 @@ ${style}
 
 const [,,...args] = process.argv;
 const css = new CSS();
-args.includes("--watch") ? css.watch() : css.process();
+if (args.includes("--watch")) {
+    css.watch();
+} else if (args.includes("--clean")) {
+    css.clean();
+} else {
+    css.process();
+}
