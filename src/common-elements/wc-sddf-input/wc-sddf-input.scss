@@ -1,3 +1,5 @@
+@import "../styles/_common.scss";
+
 :host {
     display: block;
     //background: red;
@@ -12,9 +14,17 @@ paper-input {
 }
 
 paper-checkbox {
-    margin-left: 1rem;
+    margin-left: 2rem;
+    margin-right: 1rem;
 }
 
 app-toolbar {
     font-size: 1rem;
+}
+
+paper-button {
+    background-color: $primary-color;
+    color: white;
+    padding-right: 22px;
+    padding-left: 22px;
 }

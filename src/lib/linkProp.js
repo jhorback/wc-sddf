@@ -18,7 +18,7 @@
  * @param {string} [path=prop] The state path of the property to set.
  */
 export const linkProp = (element, prop, path = null) => {
-    path = path || prop;    
+    path = path || prop;
     return (event) => {
         const fromEl = event.currentTarget;
         setTimeout(() => {

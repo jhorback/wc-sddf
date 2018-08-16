@@ -24,12 +24,16 @@ class Example1 extends LitElement {
         return html`
             <wc-sddf-layout>
                 <wc-sddf-card cardTitle="Who has written a web component?" showBackButton>
+                    
                     <wc-sddf-input on-confess=${this.confess}>
                     </wc-sddf-input>
+                    
                     <wc-sddf-results results=${results}>
                     </wc-sddf-results>
+                    
                     <wc-sddf-infobar info=${infoText}>
                     </wc-sddf-infobar>
+                    
                 </wc-sddf-card>
             </wc-sddf-layout>
         `;
