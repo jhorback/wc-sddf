@@ -12,13 +12,13 @@ class WcSddfApp extends LitElement {
                 <wc-sddf-card cardTitle="Web Components and Single Directional Data Flow">
                     <div class="content">
                         <div>
-                            <a href="example1.html">Example 1</a>
+                            <a href="example-1.html">Example 1</a>
                         </div>
                         <div>
-                            <a href="example1.html">Example 2</a>
+                            <a href="example-1.html">Example 2</a>
                         </div>
                         <div>
-                            <a href="example1.html">Example 3</a>
+                            <a href="example-1.html">Example 3</a>
                         </div>
                     </div>
                 </wc-sddf-card>

@@ -16,7 +16,8 @@ module.exports = (env = {}) => {
     },
     
     entry: {
-      app: ["babel-polyfill", "./src/wc-sddf-app/wc-sddf-app.js"]
+      app: ["babel-polyfill", "./src/wc-sddf-app/wc-sddf-app.js"],
+      example1: ["babel-polyfill", "./src/example-1-elements/example-1.js"]
     },
     
     output: {
@@ -25,11 +26,11 @@ module.exports = (env = {}) => {
       publicPath: "/"
     },
     
-    optimization: {
-      splitChunks: {
-        chunks: "all"
-      }
-    },
+    // optimization: {
+    //   splitChunks: {
+    //     chunks: "all"
+    //   }
+    // },
     
     resolve: {
       modules: [path.resolve(__dirname, "node_modules")]
