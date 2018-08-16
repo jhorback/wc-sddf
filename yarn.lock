@@ -85,6 +85,12 @@
     "@polymer/iron-meta" "^3.0.0-pre.21"
     "@polymer/polymer" "^3.0.0"
 
+"@polymer/iron-image@^3.0.0-pre.21":
+  version "3.0.0-pre.21"
+  resolved "https://registry.yarnpkg.com/@polymer/iron-image/-/iron-image-3.0.0-pre.21.tgz#0838f7699c7ad7928cbbdcca894dd3e79b3ed6f0"
+  dependencies:
+    "@polymer/polymer" "^3.0.0"
+
 "@polymer/iron-media-query@^3.0.0-pre.21":
   version "3.0.0-pre.21"
   resolved "https://registry.yarnpkg.com/@polymer/iron-media-query/-/iron-media-query-3.0.0-pre.21.tgz#bc676e139eec47db6b0d7d7da2117f3150ab61e9"
@@ -130,6 +136,15 @@
     "@polymer/iron-behaviors" "^3.0.0-pre.21"
     "@polymer/iron-checked-element-behavior" "^3.0.0-pre.21"
     "@polymer/paper-ripple" "^3.0.0-pre.21"
+    "@polymer/polymer" "^3.0.0"
+
+"@polymer/paper-card@^3.0.0-pre.21":
+  version "3.0.0-pre.21"
+  resolved "https://registry.yarnpkg.com/@polymer/paper-card/-/paper-card-3.0.0-pre.21.tgz#71a7b86003f9d92455407a9cc6609b08213c8ca1"
+  dependencies:
+    "@polymer/iron-flex-layout" "^3.0.0-pre.21"
+    "@polymer/iron-image" "^3.0.0-pre.21"
+    "@polymer/paper-styles" "^3.0.0-pre.21"
     "@polymer/polymer" "^3.0.0"
 
 "@polymer/paper-icon-button@^3.0.0-pre.15":

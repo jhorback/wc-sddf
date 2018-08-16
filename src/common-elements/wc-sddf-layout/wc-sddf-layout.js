@@ -14,10 +14,6 @@ class WcSddfLayout extends LitElement {
         super();
     }
 
-    /**
-     * How to get users from the data element to set users here?
-     * @param {object} properties 
-     */
     _render({}) {
         return html`
             ${style.content}
@@ -29,7 +25,6 @@ class WcSddfLayout extends LitElement {
                 </app-toolbar>
                 <app-toolbar class="bottom"></app-toolbar>
             </app-header>
-            LAYOUT HERE 
             <slot></slot>         
         `;
     }
