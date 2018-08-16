@@ -44,10 +44,25 @@
   version "3.0.0-pre.21"
   resolved "https://registry.yarnpkg.com/@polymer/font-roboto/-/font-roboto-3.0.0-pre.21.tgz#65674464138a51f57cfdfd043e394d8fe75990b3"
 
+"@polymer/iron-a11y-announcer@^3.0.0-pre.21":
+  version "3.0.0-pre.21"
+  resolved "https://registry.yarnpkg.com/@polymer/iron-a11y-announcer/-/iron-a11y-announcer-3.0.0-pre.21.tgz#717cfd1b34f281c2085ad6b45ecd724bd2ae6d84"
+  dependencies:
+    "@polymer/polymer" "^3.0.0"
+
 "@polymer/iron-a11y-keys-behavior@^3.0.0-pre.21":
   version "3.0.0-pre.21"
   resolved "https://registry.yarnpkg.com/@polymer/iron-a11y-keys-behavior/-/iron-a11y-keys-behavior-3.0.0-pre.21.tgz#4b79ebfea1fb59225c00a6d9b360df7ed2696c19"
   dependencies:
+    "@polymer/polymer" "^3.0.0"
+
+"@polymer/iron-autogrow-textarea@^3.0.0-pre.21":
+  version "3.0.0-pre.21"
+  resolved "https://registry.yarnpkg.com/@polymer/iron-autogrow-textarea/-/iron-autogrow-textarea-3.0.0-pre.21.tgz#4091125483fb712f8ef3b3daf16039d9dd10ce77"
+  dependencies:
+    "@polymer/iron-behaviors" "^3.0.0-pre.21"
+    "@polymer/iron-flex-layout" "^3.0.0-pre.21"
+    "@polymer/iron-validatable-behavior" "^3.0.0-pre.21"
     "@polymer/polymer" "^3.0.0"
 
 "@polymer/iron-behaviors@^3.0.0-pre.21":
@@ -106,6 +121,14 @@
   dependencies:
     "@polymer/polymer" "^3.0.0"
 
+"@polymer/iron-input@^3.0.0-pre.21":
+  version "3.0.0-pre.21"
+  resolved "https://registry.yarnpkg.com/@polymer/iron-input/-/iron-input-3.0.0-pre.21.tgz#181f823406e71134c6ed42dd19094d1cb194329a"
+  dependencies:
+    "@polymer/iron-a11y-announcer" "^3.0.0-pre.21"
+    "@polymer/iron-validatable-behavior" "^3.0.0-pre.21"
+    "@polymer/polymer" "^3.0.0"
+
 "@polymer/iron-media-query@^3.0.0-pre.21":
   version "3.0.0-pre.21"
   resolved "https://registry.yarnpkg.com/@polymer/iron-media-query/-/iron-media-query-3.0.0-pre.21.tgz#bc676e139eec47db6b0d7d7da2117f3150ab61e9"
@@ -153,6 +176,15 @@
     "@polymer/paper-ripple" "^3.0.0-pre.21"
     "@polymer/polymer" "^3.0.0"
 
+"@polymer/paper-button@^3.0.0-pre.21":
+  version "3.0.0-pre.21"
+  resolved "https://registry.yarnpkg.com/@polymer/paper-button/-/paper-button-3.0.0-pre.21.tgz#fa3531b0fe3fe45371249fdb27ea7763a53aab80"
+  dependencies:
+    "@polymer/iron-flex-layout" "^3.0.0-pre.21"
+    "@polymer/paper-behaviors" "^3.0.0-pre.21"
+    "@polymer/paper-styles" "^3.0.0-pre.21"
+    "@polymer/polymer" "^3.0.0"
+
 "@polymer/paper-card@^3.0.0-pre.21":
   version "3.0.0-pre.21"
   resolved "https://registry.yarnpkg.com/@polymer/paper-card/-/paper-card-3.0.0-pre.21.tgz#71a7b86003f9d92455407a9cc6609b08213c8ca1"
@@ -162,12 +194,35 @@
     "@polymer/paper-styles" "^3.0.0-pre.21"
     "@polymer/polymer" "^3.0.0"
 
+"@polymer/paper-checkbox@^3.0.0-pre.21":
+  version "3.0.0-pre.21"
+  resolved "https://registry.yarnpkg.com/@polymer/paper-checkbox/-/paper-checkbox-3.0.0-pre.21.tgz#d9118993bcd3c20b0d5591fe58bc9b56e9738492"
+  dependencies:
+    "@polymer/iron-a11y-keys-behavior" "^3.0.0-pre.21"
+    "@polymer/iron-checked-element-behavior" "^3.0.0-pre.21"
+    "@polymer/paper-behaviors" "^3.0.0-pre.21"
+    "@polymer/paper-ripple" "^3.0.0-pre.21"
+    "@polymer/paper-styles" "^3.0.0-pre.21"
+    "@polymer/polymer" "^3.0.0"
+
 "@polymer/paper-icon-button@^3.0.0-pre.15":
   version "3.0.0-pre.21"
   resolved "https://registry.yarnpkg.com/@polymer/paper-icon-button/-/paper-icon-button-3.0.0-pre.21.tgz#09e0e3c00a1a32f0a735e5c5367ba502d639ee28"
   dependencies:
     "@polymer/iron-icon" "^3.0.0-pre.21"
     "@polymer/paper-behaviors" "^3.0.0-pre.21"
+    "@polymer/paper-styles" "^3.0.0-pre.21"
+    "@polymer/polymer" "^3.0.0"
+
+"@polymer/paper-input@^3.0.0-pre.21":
+  version "3.0.0-pre.21"
+  resolved "https://registry.yarnpkg.com/@polymer/paper-input/-/paper-input-3.0.0-pre.21.tgz#637ccb08c53604bf8334f8c0b7f764e509afb424"
+  dependencies:
+    "@polymer/iron-a11y-keys-behavior" "^3.0.0-pre.21"
+    "@polymer/iron-autogrow-textarea" "^3.0.0-pre.21"
+    "@polymer/iron-behaviors" "^3.0.0-pre.21"
+    "@polymer/iron-form-element-behavior" "^3.0.0-pre.21"
+    "@polymer/iron-input" "^3.0.0-pre.21"
     "@polymer/paper-styles" "^3.0.0-pre.21"
     "@polymer/polymer" "^3.0.0"
 

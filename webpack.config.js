@@ -26,11 +26,12 @@ module.exports = (env = {}) => {
       publicPath: "/"
     },
     
-    optimization: {
-      splitChunks: {
-        chunks: "all"
-      }
-    },
+    // caused an inssue with paper-card impor?
+    // optimization: {
+    //   splitChunks: {
+    //     chunks: "all"
+    //   }
+    // },
     
     resolve: {
       modules: [path.resolve(__dirname, "node_modules")]

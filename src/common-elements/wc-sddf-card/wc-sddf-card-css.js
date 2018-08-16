@@ -18,6 +18,9 @@ export const style = html`
 paper-card {
   width: 100%; }
 
+paper-icon-button {
+  margin-right: 0.5rem; }
+
 .paper-card-contents {
   padding: 1em; }
 
