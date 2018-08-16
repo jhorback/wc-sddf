@@ -5,16 +5,39 @@ import "../common-elements/wc-sddf-card/wc-sddf-card.js";
 
 
 class Example1 extends LitElement {
-    _render({foo, state}) {
+    static get properties() {
+        return {          
+            results: Object,
+            infoText: String
+        };
+    }
+
+    constructor() {
+        super();
+        this.results = [];
+    }
+
+    _render({results, infoText}) {
         return html`
             <wc-sddf-layout>
                 <wc-sddf-card cardTitle="Who has written a web component?" showBackButton>
                     <div class="content">
-                        ADD INPUT FIELDS
+                        EXAMPLE-1 CONTENT
+                        <wc-sddf-input on-confess=${this.confess}>
+                        </wc-sddf-input>
+                        <wc-sddf-results results=${results}>
+                        </wc-sddf-results>
+                        <wc-sddf-infobar info=${infoText}>
+                        </wc-sddf-infobar>                        
                     </div>
                 </wc-sddf-card>
             </wc-sddf-layout>
         `;
+    }
+
+    confess(event) {
+        const {name, yes} = event.detail;
+        alert(`here: name: ${name}, yes:  ${yes}`);
     }
 }
 

@@ -26,11 +26,11 @@ module.exports = (env = {}) => {
       publicPath: "/"
     },
     
-    // optimization: {
-    //   splitChunks: {
-    //     chunks: "all"
-    //   }
-    // },
+    optimization: {
+      splitChunks: {
+        chunks: "all"
+      }
+    },
     
     resolve: {
       modules: [path.resolve(__dirname, "node_modules")]
