@@ -6,13 +6,15 @@
 .content {
     display: flex;
 }
+
 paper-input {
     flex-grow: 1;
 }
+
 paper-checkbox {
-    //display: inline-block;
-    //border: 1px solid red;
-    //padding-top: 1.5rem;
-    margin: 2rem;
-    margin-right: 0.23rem;
+    margin-left: 1rem;
+}
+
+app-toolbar {
+    font-size: 1rem;
 }

@@ -9,7 +9,7 @@ export const style = html`
 .content {
   width: 100%;
   position: relative;
-  top: -48px; }
+  top: -68px; }
 
 .card-container {
   margin: 0 auto;
@@ -20,9 +20,6 @@ paper-card {
 
 paper-icon-button {
   margin-right: 0.5rem; }
-
-.paper-card-contents {
-  padding: 1em; }
 
 </style>`;
         

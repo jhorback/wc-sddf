@@ -31,13 +31,11 @@ class WcSddfCard extends LitElement {
                                 ? html `
                                     <paper-icon-button icon="arrow-back" on-click=${this.goBack}></paper-icon-button>
                                 `
-                                : ``                            
+                                : ``
                             }
                             <div main-title>${cardTitle}</div>                            
                         </app-toolbar>
-                        <div class="paper-card-contents">
-                            <slot></slot>
-                        </div>
+                        <slot></slot>
                     </paper-card>
                 </div>
             </div>

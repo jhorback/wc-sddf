@@ -9,17 +9,16 @@ export const style = html`
 :host {
   display: block; }
 
-.content {
-  display: flex; }
-
-paper-input {
-  flex-grow: 1; }
-
-paper-checkbox {
-  margin-left: 1rem; }
-
 app-toolbar {
-  font-size: 1rem; }
+  margin-top: 1rem;
+  font-size: 1rem;
+  padding: 0 0.5rem; }
+
+.info {
+  margin-right: 1.2rem; }
+
+.clear-button {
+  flex-grow: 1; }
 
 </style>`;
         

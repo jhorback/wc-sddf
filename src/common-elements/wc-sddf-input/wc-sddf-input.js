@@ -3,6 +3,7 @@ import {style} from "./wc-sddf-input-css.js";
 import "@polymer/paper-input/paper-input.js";
 import "@polymer/paper-checkbox/paper-checkbox.js";
 import "@polymer/paper-button/paper-button.js";
+import "@polymer/app-layout/app-toolbar/app-toolbar.js";
 
 class WcSddfInput extends LitElement {
     static get properties() {
@@ -17,7 +18,7 @@ class WcSddfInput extends LitElement {
     _render({}) {
         return html`
             ${style.content}
-            <div class="content">
+            <app-toolbar>
                 <paper-input label="Enter name">
                 </paper-input>
                 <paper-checkbox>
@@ -25,12 +26,12 @@ class WcSddfInput extends LitElement {
                 <paper-button on-click=${this.confess}>
                     Confess
                 </paper-button>
-            </div>
+            </app-toolbar>
         `;
     }
 
     confess() {
-        alert("Confessed");
+        console.log("CONFESSED!!!!!!!!!!!!!!!!!!");
     }
 }
 
