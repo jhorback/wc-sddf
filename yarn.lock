@@ -30,7 +30,7 @@
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.0.tgz#50c1e2260ac0ed9439a181de3725a0168d59c48a"
 
-"@polymer/app-layout@^3.0.0-pre.15":
+"@polymer/app-layout@^3.0.0-pre.21":
   version "3.0.0-pre.21"
   resolved "https://registry.yarnpkg.com/@polymer/app-layout/-/app-layout-3.0.0-pre.21.tgz#d6312cfd3ccb70112996049334b550371cdae867"
   dependencies:
