@@ -1,7 +1,7 @@
-import {LitElement, html} from "@polymer/lit-element/lit-element.js";
+import {LitElement, html} from "@polymer/lit-element";
 import {style} from "./wc-sddf-infobar-css.js";
-import "@polymer/paper-button/paper-button.js";
-import "@polymer/app-layout/app-toolbar/app-toolbar.js";
+import "@polymer/paper-button";
+import "@polymer/app-layout/app-toolbar/app-toolbar";
 
 class WcSddfInfobar extends LitElement {
     static get properties() {
@@ -15,11 +15,19 @@ class WcSddfInfobar extends LitElement {
     }
 
     _render({info}) {
+        if (!info) {
+            return html``;
+        };
+        
         return html`
             ${style.content}
             <app-toolbar>
                 <div class="clear-button">
-                    <paper-button>Clear all</paper-button>
+                    <paper-button
+                        on-click=${this.clearAll.bind(this)}
+                        >
+                        Clear all
+                    </paper-button>
                 </div>
                 <div class="info">
                     ${info}
@@ -28,8 +36,8 @@ class WcSddfInfobar extends LitElement {
         `;
     }
 
-    confess() {
-        alert("Confessed");
+    clearAll() {
+        this.dispatchEvent(new CustomEvent("clear-all"));
     }
 }
 

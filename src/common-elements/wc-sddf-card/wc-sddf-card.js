@@ -1,9 +1,9 @@
-import {LitElement, html} from "@polymer/lit-element/lit-element.js";
+import {LitElement, html} from "@polymer/lit-element";
 import {style} from "./wc-sddf-card-css.js";
-import "@polymer/paper-card/paper-card.js"
-import "@polymer/app-layout/app-toolbar/app-toolbar.js";
-import "@polymer/paper-icon-button/paper-icon-button.js";
-import "@polymer/iron-icons/iron-icons.js";
+import "@polymer/paper-card"
+import "@polymer/app-layout/app-toolbar/app-toolbar";
+import "@polymer/paper-icon-button";
+import "@polymer/iron-icons/iron-icons";
 
 
 class WcSddfCard extends LitElement {

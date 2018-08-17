@@ -1,7 +1,7 @@
-import {LitElement, html} from '@polymer/lit-element/lit-element.js';
+import {LitElement, html} from '@polymer/lit-element';
 import './test-data-el.js';
 import './test-lit-child-el.js';
-import {directive} from 'lit-html/lit-html.js';
+import {directive} from 'lit-html';
 import {linkProp} from '../lib/linkProp.js';
 import {defaultState} from './test-data-el.js';
 

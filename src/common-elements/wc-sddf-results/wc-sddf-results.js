@@ -1,7 +1,7 @@
-import {LitElement, html} from "@polymer/lit-element/lit-element.js";
-import {repeat} from 'lit-html/lib/repeat.js';
+import {LitElement, html} from "@polymer/lit-element";
+import {repeat} from 'lit-html/lib/repeat';
 import {style} from "./wc-sddf-results-css.js";
-import "@polymer/paper-item/paper-icon-item.js";
+import "@polymer/paper-item/paper-icon-item";
 
 class WcSddfResults extends LitElement {
     static get properties() {
@@ -10,7 +10,7 @@ class WcSddfResults extends LitElement {
         };
     }
 
-    _render({results}) {
+    _render({results}) {        
         return html`
             ${style.content}
             ${repeat(results, (item, index) => html`

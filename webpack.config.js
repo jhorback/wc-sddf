@@ -9,7 +9,7 @@ module.exports = (env = {}) => {
 
   return {
     mode: "development",
-    //devtool: "inline-source-map",
+    devtool: "inline-source-map",
     devServer: {
       contentBase: "./build",
       port: 3023
