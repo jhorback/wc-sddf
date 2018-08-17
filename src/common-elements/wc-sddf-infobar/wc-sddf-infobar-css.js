@@ -10,7 +10,6 @@ export const style = html`
   display: block; }
 
 app-toolbar {
-  margin-top: 1rem;
   font-size: 1rem;
   padding: 0 0.5rem; }
 

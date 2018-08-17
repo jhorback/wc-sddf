@@ -3,6 +3,7 @@ import {LitElement, html} from '@polymer/lit-element/lit-element.js';
 import "../common-elements/wc-sddf-layout/wc-sddf-layout.js";
 import "../common-elements/wc-sddf-card/wc-sddf-card.js";
 import "../common-elements/wc-sddf-input/wc-sddf-input.js";
+import "../common-elements/wc-sddf-results/wc-sddf-results.js";
 import "../common-elements/wc-sddf-infobar/wc-sddf-infobar.js";
 
 
