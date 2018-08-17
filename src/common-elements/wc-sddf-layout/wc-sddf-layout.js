@@ -1,8 +1,8 @@
-import {LitElement, html} from "@polymer/lit-element/lit-element.js";
+import {LitElement, html} from "@polymer/lit-element";
 import {style} from "./wc-sddf-layout-css.js";
 import "../styles/body-styles.js";
-import "@polymer/app-layout/app-header/app-header.js";
-import "@polymer/app-layout/app-toolbar/app-toolbar.js";
+import "@polymer/app-layout/app-header/app-header";
+import "@polymer/app-layout/app-toolbar/app-toolbar";
 
 
 class WcSddfLayout extends LitElement {

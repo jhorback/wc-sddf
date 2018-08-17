@@ -1,5 +1,5 @@
-import {LitElement, html} from '@polymer/lit-element/lit-element.js';
-import {repeat} from 'lit-html/lib/repeat.js';
+import {LitElement, html} from '@polymer/lit-element';
+import {repeat} from 'lit-html/lib/repeat';
 import {linkVal, linkChecked} from '../../lib/linkProp.js';
 
 
