@@ -18,7 +18,8 @@ module.exports = (env = {}) => {
     entry: {
       app: ["babel-polyfill", "./src/wc-sddf-app/wc-sddf-app.js"],
       example1: ["babel-polyfill", "./src/example-1-elements/example-1.js"],
-      example2: ["babel-polyfill", "./src/example-2-elements/example-2.js"]
+      example2: ["babel-polyfill", "./src/example-2-elements/example-2.js"],
+      example3: ["babel-polyfill", "./src/example-3-elements/example-3.js"]
     },
     
     output: {

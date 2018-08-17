@@ -45,7 +45,7 @@ class WcSddfApp extends LitElement {
                             <a href="example-2.html">Example 2</a> ${example2Text}
                         </div>
                         <div>
-                            <a href="example-1.html">Example 3</a> ${example3Text}
+                            <a href="example-3.html">Example 3</a> ${example3Text}
                         </div>
                     </div>
                 </wc-sddf-card>

@@ -1,6 +1,6 @@
 import {LitElement, html} from '@polymer/lit-element';
 import {linkProp} from "../lib/linkProp.js";
-import {defaultState} from "./example-1-data.js";
+import {defaultState} from "./example-3-data.js";
 import "../common-elements/wc-sddf-layout/wc-sddf-layout.js";
 import "../common-elements/wc-sddf-card/wc-sddf-card.js";
 import "../common-elements/wc-sddf-input/wc-sddf-input.js";
@@ -8,7 +8,7 @@ import "../common-elements/wc-sddf-results/wc-sddf-results.js";
 import "../common-elements/wc-sddf-infobar/wc-sddf-infobar.js";
 
 
-class Example1 extends LitElement {
+class Example3 extends LitElement {
     static get properties() {
         return {          
             state: Object
@@ -22,13 +22,13 @@ class Example1 extends LitElement {
 
     _render({state}) {
         return html`
-            <example-1-data
-                dbKey="example-1"
+            <example-3-data
+                dbKey="example-3"
                 on-state-changed=${linkProp(this, "state")}
                 >
-            </example-1-data>
+            </example-3-data>
             <wc-sddf-layout>                
-                <wc-sddf-card cardTitle="Who has written a web component?" showBackButton>
+                <wc-sddf-card cardTitle="Who liked this talk?" showBackButton>
                     
                     <wc-sddf-input on-confess=${this.confess}
                         state=${state}
@@ -65,4 +65,4 @@ class Example1 extends LitElement {
     }
 }
 
-customElements.define('example-1', Example1);
+customElements.define('example-3', Example3);

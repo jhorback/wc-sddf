@@ -12,7 +12,7 @@ export const defaultState = {
 };
 
 
-class Example1Data extends EventMap(ExampleData) {
+class Example3Data extends EventMap(ExampleData) {
     static get eventMap() {
         return {
             "add-confession": "_addConfession",
@@ -21,4 +21,4 @@ class Example1Data extends EventMap(ExampleData) {
     }
 }
 
-customElements.define('example-1-data', Example1Data);
+customElements.define('example-3-data', Example3Data);
