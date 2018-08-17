@@ -19,6 +19,7 @@ export class ExampleData extends HTMLElement {
         const state = JSON.parse(sessionStorage.getItem(this.dbKey));
         this.state = state || defaultState;
         this.dispatchEvent(new CustomEvent("state-changed"));
+        this.disconnectedCallback = undefined;
     }
 
     _addConfession(event) {
