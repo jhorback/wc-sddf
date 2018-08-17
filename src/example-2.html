@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+    <title>WC SDDF - Example 2</title>
+
+    <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+    <script>
+       (function() {      
+        document.addEventListener('WebComponentsReady', function componentsReady () {
+          document.removeEventListener('WebComponentsReady', componentsReady);
+
+          const vendorScript = document.createElement('script');
+          vendorScript.src = '/vendors~app~example2.bundle.js';
+          //document.head.appendChild(vendorScript); 
+
+          const appScript = document.createElement('script');
+          appScript.src = '/example2.bundle.js';
+          document.head.appendChild(appScript);                   
+        });
+      })();
+    </script>
+  </head>
+  <body>
+    <example-2></example-2>
+  </body>
+</html>

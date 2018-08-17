@@ -25,7 +25,7 @@ class WcSddfApp extends LitElement {
         if (!state) {
             return;
         }
-        this[propertyName] = ` - ${state.infoText}`;
+        this[propertyName] = state.infoText ? ` - ${state.infoText}` : "";
     }
 
     _render({
@@ -42,7 +42,7 @@ class WcSddfApp extends LitElement {
                             <a href="example-1.html">Example 1</a> ${example1Text}
                         </div>
                         <div>
-                            <a href="example-1.html">Example 2</a> ${example2Text}
+                            <a href="example-2.html">Example 2</a> ${example2Text}
                         </div>
                         <div>
                             <a href="example-1.html">Example 3</a> ${example3Text}

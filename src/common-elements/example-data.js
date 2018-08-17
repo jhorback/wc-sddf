@@ -4,8 +4,10 @@ import {EventMap} from "../lib/EventMap.js";
 export const defaultState = {
     results: [],
     infoText: "",
-    name: "",
-    yes: false
+    input: {
+        nameInput: "",
+        yesInput: false
+    }
 };
 
 
@@ -23,7 +25,6 @@ export class ExampleData extends HTMLElement {
         const {nameInput: name, yesInput: yes} = event.detail;
         const results = [...this.state.results];
 
-        debugger;
         results.unshift({name, yes});
         
         this.state = Object.assign({}, this.state, {
