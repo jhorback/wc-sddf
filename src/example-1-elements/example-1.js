@@ -17,7 +17,19 @@ class Example1 extends LitElement {
 
     constructor() {
         super();
-        this.results = [];
+        this.results = [{
+            name: "John",
+            yes: true
+        }, {
+            name: "George",
+            yes: false
+        },{
+            name: "Sally",
+            yes: false
+        },{
+            name: "Dan",
+            yes: true
+        }];
         this.infoText = "67% are awesome";
     }
 

@@ -18,8 +18,13 @@ Grays:
 */
 :host {
   display: block;
-  border: 1px dashed #5E6A71;
   padding: 2rem 1rem; }
+
+.answer-yes {
+  color: green; }
+
+.answer-no {
+  color: red; }
 
 </style>`;
         
