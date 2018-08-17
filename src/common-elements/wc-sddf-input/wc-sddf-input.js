@@ -24,13 +24,13 @@ class WcSddfInput extends LitElement {
                 <paper-input
                     autofocus
                     label="Enter name"
-                    on-change=${linkVal(this, "state.name")}
-                    value=${state.name}
+                    on-change=${linkVal(this, "state.input.nameInput")}
+                    value=${state.input.nameInput}
                     >
                 </paper-input>
                 <paper-checkbox
-                    on-change=${linkChecked(this, "state.yes")}
-                    checked=${state.yes}
+                    on-change=${linkChecked(this, "state.input.yesInput")}
+                    checked=${state.input.yesInput}
                     >
                 </paper-checkbox>
                 <paper-button type="submit" raised on-click=${this.confess.bind(this)}>
@@ -41,12 +41,14 @@ class WcSddfInput extends LitElement {
     }
 
     confess() {
-        const {name, yes} = this.state;
+        // @ts-ignore
+        const {nameInput, yesInput} = this.state.input;
 
         this.dispatchEvent(new CustomEvent("confess", {
-            detail: {name, yes}
+            detail: {nameInput, yesInput}
         }));
 
+        // @ts-ignore
         this.shadowRoot.querySelector("paper-input").focus();
     }
 }
