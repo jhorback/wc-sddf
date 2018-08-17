@@ -1,5 +1,4 @@
 import {LitElement, html} from '@polymer/lit-element';
-import {linkProp} from "../lib/linkProp.js";
 import {defaultState} from "./example-1-data.js";
 import "../common-elements/wc-sddf-layout/wc-sddf-layout.js";
 import "../common-elements/wc-sddf-card/wc-sddf-card.js";
@@ -24,7 +23,7 @@ class Example1 extends LitElement {
         return html`
             <example-1-data
                 dbKey="example-1"
-                on-state-changed=${linkProp(this, "state")}
+                on-state-changed=${this._stateChanged.bind(this)}
                 >
             </example-1-data>
             <wc-sddf-layout>                
@@ -62,6 +61,16 @@ class Example1 extends LitElement {
             bubbles: true,
             composed: true
         }));
+    }
+
+    _stateChanged(event) {
+        const fromEl = event.currentTarget;
+        
+        // use a setTimeout here since etting properties in response
+        // to other properties changing considered harmful.
+        setTimeout(() => {
+            this.state = fromEl.state;
+        });
     }
 }
 
