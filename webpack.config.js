@@ -9,13 +9,18 @@ module.exports = (env = {}) => {
 
   return {
     mode: "development",
-    devtool: "inline-source-map",
+    devtool: "source-map",
+    //devtool: "inline-source-map",
     devServer: {
       contentBase: "./build",
       port: 3023
     },
     
     entry: {
+      "webcomponents-loader": [
+        //"./node_modules/@webcomponents/webcomponentsjs/custom-elements-es5-adapter.js",
+        "./node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"
+      ],
       app: ["babel-polyfill", "./src/wc-sddf-app/wc-sddf-app.js"],
       example1: ["babel-polyfill", "./src/example-1-elements/example-1.js"],
       example2: ["babel-polyfill", "./src/example-2-elements/example-2.js"],
@@ -23,7 +28,7 @@ module.exports = (env = {}) => {
     },
     
     output: {
-      filename: "[name].bundle.js",
+      filename: "bundle.[name].js",
       path: path.resolve(__dirname, "./build"),
       publicPath: "/"
     },
@@ -51,11 +56,11 @@ module.exports = (env = {}) => {
                 "env", {
                   "targets": {
                     "browsers": [
-                      "last 2 Chrome versions",
-                      //"ie 11"
+                      //"last 2 Chrome versions",
+                      "ie 11"
                     ]
                   },
-                  "modules": false
+                  //"modules": false
                 }
               ]
             ],
@@ -83,9 +88,9 @@ module.exports = (env = {}) => {
       // }),
       new CopyWebpackPlugin([{
         from: path.resolve(__dirname,
-          "node_modules/@webcomponents/webcomponentsjs/*.js"
+          "node_modules/@webcomponents/webcomponentsjs/**/*"
         ),
-        to: "node_modules/@webcomponents/webcomponentsjs/[name].[ext]"
+        //to: "node_modules/@webcomponents/webcomponentsjs/"
       }]),
       new CopyWebpackPlugin([{
         from: path.resolve(__dirname, "src/*.html"),
