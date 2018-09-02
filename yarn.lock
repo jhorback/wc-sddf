@@ -404,9 +404,9 @@
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/@webcomponents/shadycss/-/shadycss-1.4.0.tgz#2b2b66443252f81d02ebb2dd139e4a717655bfa9"
 
-"@webcomponents/webcomponentsjs@^2.0.0":
-  version "2.0.4"
-  resolved "https://registry.yarnpkg.com/@webcomponents/webcomponentsjs/-/webcomponentsjs-2.0.4.tgz#fe18c288f99b7103e9ae7a766020f9702cedcc08"
+"@webcomponents/webcomponentsjs@^2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@webcomponents/webcomponentsjs/-/webcomponentsjs-2.1.0.tgz#0300177ce212fbed4c981a61e3a569e6aa1f0c95"
 
 abbrev@1:
   version "1.1.1"

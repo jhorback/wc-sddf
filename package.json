@@ -4,7 +4,7 @@
   "license": "0BSD",
   "scripts": {
     "start": "concurrently --kill-others \"yarn watch\" \"yarn serve\"",
-    "serve": "webpack-dev-server --env.devServer",
+    "serve": "webpack-dev-server --env.isDevServer",
     "watch": "yarn css --watch",
     "build": "webpack",
     "css": "node --experimental-modules scripts/css.mjs"
@@ -21,7 +21,7 @@
     "@polymer/paper-item": "^3.0.0-pre.21",
     "@polymer/paper-toolbar": "^3.0.0-pre.21",
     "@polymer/polymer": "^3.0.0",
-    "@webcomponents/webcomponentsjs": "^2.0.0",
+    "@webcomponents/webcomponentsjs": "^2.1.0",
     "babel-polyfill": "7.0.0-beta.3"
   },
   "devDependencies": {

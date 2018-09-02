@@ -4,53 +4,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
     <title>WC SDDF</title>
-
-
-    <!-- <script src="../node_modules/@webcomponents/webcomponentsjs/custom-elements-es5-adapter.js"></script>
-    <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script> -->
-    <!-- <script src="//cdn.polyfill.io/v2/polyfill.min.js"></script> -->
-    <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
-    <script>
-    debugger;
-    </script>
-    <!-- <script src="/bundle.webcomponents-loader.js"></script> -->
-    <script>
-  //             (function() {
-  //   if (
-  //     // No Reflect, no classes, no need for shim because native custom elements
-  //     // require ES2015 classes or Reflect.
-  //     window.Reflect === undefined ||
-  //     window.customElements === undefined ||
-  //     // The webcomponentsjs custom elements polyfill doesn't require
-  //     // ES2015-compatible construction (`super()` or `Reflect.construct`).
-  //     window.customElements.hasOwnProperty('polyfillWrapFlushCallback')
-  //   ) {
-  //     return;
-  //   }
-  //   const BuiltInHTMLElement = HTMLElement;
-  //   window.HTMLElement = function HTMLElement() {
-  //     return Reflect.construct(BuiltInHTMLElement, [], this.constructor);
-  //   };
-  //   HTMLElement.prototype = BuiltInHTMLElement.prototype;
-  //   HTMLElement.prototype.constructor = HTMLElement;
-  //   Object.setPrototypeOf(HTMLElement, BuiltInHTMLElement);
-  // })();
-  // customElements.forcePolyfill = true;
-  
-      (function() {
-        document.addEventListener('WebComponentsReady', function componentsReady () {
-          document.removeEventListener('WebComponentsReady', componentsReady);
-
-          const vendorScript = document.createElement('script');
-          vendorScript.src = '/bundle.vendors~app~example1.js';
-          //document.head.appendChild(vendorScript); 
-
-          const appScript = document.createElement('script');
-          appScript.src = '/bundle.app.js';
-          document.head.appendChild(appScript);                  
-        });
-      })();
-    </script>
   </head>
   <body>
     <wc-sddf-app></wc-sddf-app>    
