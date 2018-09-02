@@ -5,10 +5,14 @@
 */
 window.loadEntry = (entry) => {
     switch (entry) {
-        case "wc-test-app":
-            return import("./wc-test-app/wc-test-app.js");
-        case "wc-test2-app":
-            return import("./wc-test2-app/wc-test2-app.js");
+        case "wc-sddf-app":
+            return import("./wc-sddf-app/wc-sddf-app.js");
+        case "example-1":
+            return import("./example-1-elements/example-1.js");
+        case "example-2":
+            return import("./example-2-elements/example-2.js");
+        case "example-3":
+            return import("./example-3-elements/example-3.js");
         default:
             return Promise.reject(`loadEntry: entry "${entry}" not found`);
     }

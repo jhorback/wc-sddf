@@ -68,41 +68,43 @@ export class EnvHelper {
         return this.env.verbose;
     }
 
+    get browserList() {
+        if (this.isChrome) {
+            return ["last 2 Chrome versions"];
+        }
+
+        if (this.isModern) {
+            return [
+                "last 2 Firefox versions",
+                "last 2 Safari versions"
+            ];
+        }
+
+        return ["ie 11"];
+    }
+
     get webComponentsEntry() {
-        return getBaseScripts(this);
+        let entry = [];
+
+        if (this.isIe) {
+            entry = [
+                "babel-polyfill",
+                "./src/webcomponents.root.js",
+                "./src/window.loadEntry.js",
+                "./node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"
+            ];
+        } else if (this.isModern) {
+            entry = [
+                "./src/webcomponents.root.js",
+                "./src/window.loadEntry.js",
+                "./node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"
+            ];
+        } else {
+            entry = [
+                "./src/window.loadEntry.js"
+            ];
+        }
+
+        return entry;
     }
 }
-
-
-
-
-/**
- * Will want to use this to dynamically build up the entry point.
- * Include babel-polyfill only in the browser(s) that need it.
- * Cannot do this until the webcomponents-loader.js script is fixed
- * to allow window.WebComponents.root.
- */
-function getBaseScripts(envh) {
-    let baseScripts = [];
-
-    if (envh.isIe) {
-        baseScripts = [
-            "babel-polyfill",
-            "./src/webcomponents.root.js",
-            "./src/window.loadEntry.js",
-            "./node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"
-        ];
-    } else if (envh.isModern) {
-        baseScripts = [
-            "./src/webcomponents.root.js",
-            "./src/window.loadEntry.js",
-            "./node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"
-        ];
-    } else {
-        baseScripts = [
-            "./src/window.loadEntry.js"
-        ];
-    }
-
-    return baseScripts;
-} 
