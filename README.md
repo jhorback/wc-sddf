@@ -10,30 +10,57 @@ Run yarn to install the node modules
 
     yarn
 
-### Start the development server
 
-This command serves the app at `http://localhost:3023` and sets up watch tasks for development.
+
+### Preview the application
+
+    yarn serve
+
+This command serves the app at `http://localhost:3023` and targets chrome.
+
+You can pass a --ie flag to target IE11 and a --modern flag to target modern browsers that do not natively support custom elements.
+
+```
+yarn serve --ie
+yarn serve --modern
+```
+   
+
+
+### Development
 
     yarn start
 
+Starts the development server and sets up a watch task for development.
+
+    
+
 ### Build
 
-The `yarn build` command builds the application in the `build` directory.
+    yarn build
 
-There are two build configurations. These builds will be output to a subdirectory under the `build/` directory as follows:
+Builds the application for chrome.
+
+You can also build for other browsers:
 
 ```
-build/
-  ie11/
-  modern/
+yarn build --ie
+yarn build --modern
 ```
 
-* `ie11` targets Internet Explorer.
-* `modern` targets all evergreen browsers.
 
-### Preview the build
+### Watch
 
-This command serves specific builds.
+    yarn watch
 
-    yarn serve build/ie11/
-    yarn serve build/modern/
+Sets up a watch task.
+
+
+### Node scripts
+There are two node scripts that handle build tasks and css transpilation.
+Both support a help command to see what additional options are supported.
+
+```
+yarn webdev help
+yarn css help
+```

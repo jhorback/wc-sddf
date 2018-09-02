@@ -3,12 +3,12 @@
   "description": "Example code for web components and single directional data flow.",
   "license": "0BSD",
   "scripts": {
-    "start": "concurrently --kill-others \"yarn watch\" \"yarn serve\"",
     "serve": "yarn webdev serve",
-    "watch": "yarn css --watch",
+    "start": "concurrently --kill-others \"yarn watch\" \"yarn serve\"",
     "build": "yarn webdev build",
-    "css": "node --experimental-modules scripts/scssjs.mjs",
-    "webdev": "node --experimental-modules scripts/webdev.mjs"
+    "watch": "yarn css --watch",
+    "webdev": "node --experimental-modules scripts/webdev.mjs",
+    "css": "node --experimental-modules scripts/scssjs.mjs"
   },
   "dependencies": {
     "@polymer/app-layout": "^3.0.0-pre.21",

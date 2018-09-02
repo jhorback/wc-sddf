@@ -15,7 +15,7 @@ export default (env = {}) => {
     
     devServer: {
       contentBase: envh.targetBuildDir,
-      port: 3024
+      port: 3023
     },
     
     entry: {
