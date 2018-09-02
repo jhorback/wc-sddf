@@ -1,10 +1,15 @@
 
 
-
+/*
+ * env: {
+ *  isDevServer: boolean,
+ *  mode: string, // "production", "development"
+ *  target: string, // "chrome", "ie", "modern"
+ * }
+ */
 export class EnvHelper {
     constructor(env) {
         this.env = env;
-        this.baseScripts = getBaseScripts(this);
     }
 
     get description() {
@@ -16,8 +21,10 @@ export class EnvHelper {
     }
 
     get mode() {
-        return this.env.mode || 
-            this.isDevServer ? "development" : "production"
+        if (this.env.mode) {
+            return this.env.mode;
+        }
+        return this.isDevServer ? "development" : "production";
     }
 
     /** @return {boolean} true if running the dev server */
@@ -57,62 +64,47 @@ export class EnvHelper {
         return (this.isIe || this.isProdMode) ? "source-map" : "eval-source-map";
     }
 
-    get browsers() {
-        let browsers = [];
+    get verbose() {
+        return this.env.verbose;
+    }
+
+    get browserList() {
         if (this.isChrome) {
-            browsers = ["last 2 Chrome versions"];
-        } else if (this.isIe) {
-            browsers = ["ie 11"];
-        } else {
-            browsers = [
+            return ["last 2 Chrome versions"];
+        }
+
+        if (this.isModern) {
+            return [
                 "last 2 Firefox versions",
                 "last 2 Safari versions"
             ];
         }
 
-        return browsers;
+        return ["ie 11"];
     }
 
-    entry(entry) {
-        return entry ? this.baseScripts.concat(entry) : [...this.baseScripts];
+    get webComponentsEntry() {
+        let entry = [];
+
+        if (this.isIe) {
+            entry = [
+                "babel-polyfill",
+                "./src/webcomponents.root.js",
+                "./src/window.loadEntry.js",
+                "./node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"
+            ];
+        } else if (this.isModern) {
+            entry = [
+                "./src/webcomponents.root.js",
+                "./src/window.loadEntry.js",
+                "./node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"
+            ];
+        } else {
+            entry = [
+                "./src/window.loadEntry.js"
+            ];
+        }
+
+        return entry;
     }
 }
-
-
-
-
-/**
- * Will want to use this to dynamically build up the entry point.
- * Include babel-polyfill only in the browser(s) that need it.
- * Cannot do this until the webcomponents-loader.js script is fixed
- * to allow window.WebComponents.root.
- * 
- * usage syntax:
- * entry: {
- *  app: envh.entry(["script"]);
- * }
- */
-function getBaseScripts(envh) {
-    let baseScripts = [];
-
-    if (envh.isIe) {
-        baseScripts = [
-            "babel-polyfill",
-            "./src/WebComponentsRoot.js",
-            "./tmp/webcomponents-loader.js"
-            //"./node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"
-        ];
-    } else if (envh.isModern) {
-        baseScripts = [
-            "./src/WebComponentsRoot.js",
-            "./tmp/webcomponents-loader.js"
-            //"./node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"
-        ];
-    } else {
-        baseScripts = [
-            "./src/WebComponentsRoot.js"
-        ];
-    }
-
-    return baseScripts;
-} 
