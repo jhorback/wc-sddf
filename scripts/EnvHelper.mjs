@@ -1,10 +1,15 @@
 
 
-
+/*
+ * env: {
+ *  isDevServer: boolean,
+ *  mode: string, // "production", "development"
+ *  target: string, // "chrome", "ie", "modern"
+ * }
+ */
 export class EnvHelper {
     constructor(env) {
         this.env = env;
-        this.baseScripts = getBaseScripts(this);
     }
 
     get description() {
@@ -16,8 +21,10 @@ export class EnvHelper {
     }
 
     get mode() {
-        return this.env.mode || 
-            this.isDevServer ? "development" : "production"
+        if (this.env.mode) {
+            return this.env.mode;
+        }
+        return this.isDevServer ? "development" : "production";
     }
 
     /** @return {boolean} true if running the dev server */
@@ -57,24 +64,12 @@ export class EnvHelper {
         return (this.isIe || this.isProdMode) ? "source-map" : "eval-source-map";
     }
 
-    get browsers() {
-        let browsers = [];
-        if (this.isChrome) {
-            browsers = ["last 2 Chrome versions"];
-        } else if (this.isIe) {
-            browsers = ["ie 11"];
-        } else {
-            browsers = [
-                "last 2 Firefox versions",
-                "last 2 Safari versions"
-            ];
-        }
-
-        return browsers;
+    get verbose() {
+        return this.env.verbose;
     }
 
-    entry(entry) {
-        return entry ? this.baseScripts.concat(entry) : [...this.baseScripts];
+    get webComponentsEntry() {
+        return getBaseScripts(this);
     }
 }
 
@@ -86,11 +81,6 @@ export class EnvHelper {
  * Include babel-polyfill only in the browser(s) that need it.
  * Cannot do this until the webcomponents-loader.js script is fixed
  * to allow window.WebComponents.root.
- * 
- * usage syntax:
- * entry: {
- *  app: envh.entry(["script"]);
- * }
  */
 function getBaseScripts(envh) {
     let baseScripts = [];
@@ -98,19 +88,19 @@ function getBaseScripts(envh) {
     if (envh.isIe) {
         baseScripts = [
             "babel-polyfill",
-            "./src/WebComponentsRoot.js",
-            "./tmp/webcomponents-loader.js"
-            //"./node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"
+            "./src/webcomponents.root.js",
+            "./src/window.loadEntry.js",
+            "./node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"
         ];
     } else if (envh.isModern) {
         baseScripts = [
-            "./src/WebComponentsRoot.js",
-            "./tmp/webcomponents-loader.js"
-            //"./node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"
+            "./src/webcomponents.root.js",
+            "./src/window.loadEntry.js",
+            "./node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"
         ];
     } else {
         baseScripts = [
-            "./src/WebComponentsRoot.js"
+            "./src/window.loadEntry.js"
         ];
     }
 
