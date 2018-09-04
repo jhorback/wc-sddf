@@ -27,7 +27,7 @@ class Example2 extends LitElement {
                 >
             </example-2-data>
             <wc-sddf-layout>                
-                <wc-sddf-card cardTitle="Who will arite a web component?" showBackButton>
+                <wc-sddf-card cardTitle="Who will write a web component?" showBackButton>
                     
                     <wc-sddf-input on-confess=${this.confess}
                         state=${state}

@@ -205,7 +205,7 @@ program.addOption("clean", {
 
 program.addOption("verbose", {
     flag: "v",
-    help: "Turn on vebose debugging output",
+    help: "Turn on verbose debugging output",
     defaultValue: false,
     updateEnv: (env) => {
         env.verbose = true;
@@ -225,7 +225,7 @@ program.addOption("watch", {
 program.execute((commandName, env) => {
 
     if (commandName === "help") {
-        console.log("\nAi css".bold);
+        console.log("\n> SCSSJS _".bold.blue);
         return;
     } 
 

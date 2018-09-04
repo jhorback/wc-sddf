@@ -81,9 +81,13 @@ export class CommandExecutor {
         if (option && option.updateEnv) {
           option.updateEnv(this.env);
         } else {
-          this.env._.push(option);
+          this.env._.push(arg);
         }
       });
+
+      if (this.env._.length > 0) {
+        console.warn(`Option(s) not supported: ${this.env._.join(", ")}`.yellow);
+      }
   
       beforeExecute &&
         beforeExecute(commandName, this.env);

@@ -58,7 +58,7 @@ Sets up a watch task.
 
 ### Node scripts
 There are two node scripts that handle build tasks and css transpilation.
-Both support a help command to see what additional options are supported.
+Both support a help command which will list other options.
 
 ```
 yarn webdev help

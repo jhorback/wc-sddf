@@ -25,7 +25,21 @@ class WcSddfApp extends LitElement {
         if (!state) {
             return;
         }
-        this[propertyName] = state.infoText ? ` - ${state.infoText}` : "";
+
+        let pageTitle = "";
+        switch (propertyName) {
+            case "example1Text":
+                pageTitle = "Who has written a web component?";
+                break;
+            case "example2Text":
+                pageTitle = "Who will write a web component?";
+                break;
+            case "example3Text":
+                pageTitle = "Who liked this talk?";
+                break;
+        }
+
+        this[propertyName] = state.infoText ? ` - ${pageTitle} ${state.infoText}` : "";
     }
 
     _render({

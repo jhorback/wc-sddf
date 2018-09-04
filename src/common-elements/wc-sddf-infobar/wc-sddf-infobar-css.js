@@ -2,7 +2,7 @@
 /**
  * Generated css.
  */
-import {html} from '@polymer/polymer/polymer-element';
+import {html} from '@polymer/polymer/polymer-element.js';
 
 export const style = html`
 <style>

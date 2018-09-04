@@ -100,7 +100,7 @@ program.addOption("prod", {
 
 program.addOption("verbose", {
   flag: "v",
-  help: "Turn on vebose debugging output",
+  help: "Turn on verbose debugging output",
   defaultValue: false,
   updateEnv: (env) => {
     env.verbose = true;
@@ -122,7 +122,7 @@ program.addOption("chrome", {
 });
 
 program.addOption("modern", {
-  help: "Set the target browser to modern browsers (e.g. firefox, safari, etc.)",
+  help: "Set the target browser to modern browsers not supporting web components",
   updateEnv: (env) => {
     env.target = "modern";
   }
@@ -131,7 +131,7 @@ program.addOption("modern", {
 program.execute((commandName, env) => {
 
   if (commandName === "help") {
-    console.log("\nAi webdev".bold);
+    console.log("\n> WEBDEV _".bold.blue);
     return;
   } 
 
