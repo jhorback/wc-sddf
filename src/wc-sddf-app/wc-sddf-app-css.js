@@ -2,12 +2,12 @@
 /**
  * Generated css.
  */
-import {html} from '@polymer/polymer/polymer-element.js';
+import {html} from 'lit-html/lit-html.js';
 
-export const style = html`
+export const style = (html`
 <style>
 .content {
   padding: 0 2rem 2rem 2rem; }
 
-</style>`;
+</style>`).getTemplateElement().content;
         

@@ -48,7 +48,7 @@ class WcSddfApp extends LitElement {
         example3Text
     }) {
         return html`
-            ${style.content}
+            ${style}
             <wc-sddf-layout>
                 <wc-sddf-card cardTitle="Web Components and Single Directional Data Flow">
                     <div class="content">

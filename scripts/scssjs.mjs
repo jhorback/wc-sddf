@@ -148,12 +148,12 @@ class CSS {
 /**
  * Generated css.
  */
-import {html} from '@polymer/polymer/polymer-element.js';
+import {html} from 'lit-html/lit-html.js';
 
-export const style = html\`
+export const style = (html\`
 <style>
 ${style}
-</style>\`;
+</style>\`).getTemplateElement().content;
         `;
     }
 }

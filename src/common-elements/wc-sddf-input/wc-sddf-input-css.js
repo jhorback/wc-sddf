@@ -2,9 +2,9 @@
 /**
  * Generated css.
  */
-import {html} from '@polymer/polymer/polymer-element.js';
+import {html} from 'lit-html/lit-html.js';
 
-export const style = html`
+export const style = (html`
 <style>
 /*
 Oranges:
@@ -38,5 +38,5 @@ paper-button {
   padding-right: 22px;
   padding-left: 22px; }
 
-</style>`;
+</style>`).getTemplateElement().content;
         

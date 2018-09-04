@@ -19,7 +19,7 @@ class WcSddfInput extends LitElement {
 
     _render({state}) {
         return html`
-            ${style.content}
+            ${style}
             <app-toolbar>
                 <paper-input
                     autofocus

@@ -2,9 +2,9 @@
 /**
  * Generated css.
  */
-import {html} from '@polymer/polymer/polymer-element.js';
+import {html} from 'lit-html/lit-html.js';
 
-export const style = html`
+export const style = (html`
 <style>
 .content {
   width: 100%;
@@ -21,5 +21,5 @@ paper-card {
 paper-icon-button {
   margin-right: 0.5rem; }
 
-</style>`;
+</style>`).getTemplateElement().content;
         

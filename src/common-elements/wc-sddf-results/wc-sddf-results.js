@@ -12,7 +12,7 @@ class WcSddfResults extends LitElement {
 
     _render({results}) {        
         return html`
-            ${style.content}
+            ${style}
             ${repeat(results, (item, index) => html`
                 <paper-icon-item>
                     <iron-icon

@@ -22,7 +22,7 @@ class WcSddfCard extends LitElement {
 
     _render({cardTitle, showBackButton}) {
         return html`
-            ${style.content}
+            ${style}
             <div class="content">
                 <div class="card-container">
                     <paper-card>

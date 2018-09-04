@@ -17,7 +17,7 @@ class WcSddfLayout extends LitElement {
 
     _render({}) {
         return html`
-            ${style.content}
+            ${style}
             <app-header>
                 <app-toolbar>
                     <div class="wc-org-logo"></div>

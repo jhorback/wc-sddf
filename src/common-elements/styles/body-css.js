@@ -2,9 +2,9 @@
 /**
  * Generated css.
  */
-import {html} from '@polymer/polymer/polymer-element.js';
+import {html} from 'lit-html/lit-html.js';
 
-export const style = html`
+export const style = (html`
 <style>
 /*
 Oranges:
@@ -26,5 +26,5 @@ body {
   min-height: 100vh;
   background-color: #5E6A71; }
 
-</style>`;
+</style>`).getTemplateElement().content;
         

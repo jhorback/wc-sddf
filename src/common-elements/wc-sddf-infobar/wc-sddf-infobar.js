@@ -20,7 +20,7 @@ class WcSddfInfobar extends LitElement {
         };
         
         return html`
-            ${style.content}
+            ${style}
             <app-toolbar>
                 <div class="clear-button">
                     <paper-button
