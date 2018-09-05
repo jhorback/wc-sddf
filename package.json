@@ -11,6 +11,7 @@
     "css": "node --experimental-modules scripts/scssjs.mjs"
   },
   "dependencies": {
+    "@babel/polyfill": "^7.0.0",
     "@polymer/app-layout": "^3.0.0-pre.21",
     "@polymer/iron-icons": "^3.0.0-pre.21",
     "@polymer/lit-element": "^0.5.2",
@@ -23,16 +24,15 @@
     "@polymer/paper-toolbar": "^3.0.0-pre.21",
     "@polymer/polymer": "^3.0.0",
     "@webcomponents/webcomponentsjs": "^2.1.1",
-    "babel-polyfill": "7.0.0-beta.3",
     "lit-html": "^0.10.0"
   },
   "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
     "@csstools/postcss-sass": "^2.0.0",
-    "babel-cli": "6.26.0",
-    "babel-core": "^6.26.3",
-    "babel-loader": "^7.1.5",
-    "babel-plugin-syntax-dynamic-import": "^6.18.0",
-    "babel-preset-env": "^1.7.0",
+    "babel-loader": "^8.0.0",
     "clean-webpack-plugin": "^0.1.19",
     "colors": "^1.3.2",
     "concurrently": "^4.0.1",

@@ -88,7 +88,7 @@ export class EnvHelper {
 
         if (this.isIe) {
             entry = [
-                "babel-polyfill",
+                "@babel/polyfill",
                 "./src/webcomponents.root.js",
                 "./src/window.loadEntry.js",
                 "./node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"

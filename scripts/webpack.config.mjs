@@ -52,7 +52,7 @@ export default (env = {}) => {
           options: {
             "presets": [
               [
-                "env", {
+                "@babel/env", {
                   "targets": {
                     "browsers": envh.browserList
                   },
@@ -61,7 +61,7 @@ export default (env = {}) => {
               ]
             ],
             plugins: [
-              "syntax-dynamic-import"
+              "@babel/plugin-syntax-dynamic-import"
             ]
           }
         }
