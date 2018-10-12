@@ -19,26 +19,28 @@ class Example2 extends LitElement {
         this.state = defaultState;
     }
 
-    _render({state}) {
+    render() {
+        const {state} = this;
+
         return html`
             <example-2-data
                 dbKey="example-2"
-                on-state-changed=${this._stateChanged.bind(this)}
+                @state-changed=${this._stateChanged.bind(this)}
                 >
             </example-2-data>
             <wc-sddf-layout>                
                 <wc-sddf-card cardTitle="Who will write a web component?" showBackButton>
                     
-                    <wc-sddf-input on-confess=${this.confess}
-                        state=${state}
+                    <wc-sddf-input @confess=${this.confess}
+                        .state=${state}
                         >
                     </wc-sddf-input>
                     
-                    <wc-sddf-results results=${state.results}>
+                    <wc-sddf-results .results=${state.results}>
                     </wc-sddf-results>
                     
-                    <wc-sddf-infobar info=${state.infoText}
-                        on-clear-all=${this.clearAll}
+                    <wc-sddf-infobar .info=${state.infoText}
+                        @clear-all=${this.clearAll}
                         >
                     </wc-sddf-infobar>
                     

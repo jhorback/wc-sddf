@@ -15,7 +15,7 @@ class WcSddfLayout extends LitElement {
         super();
     }
 
-    _render({}) {
+    render() {
         return html`
             ${style}
             <app-header>

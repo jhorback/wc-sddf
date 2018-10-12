@@ -17,23 +17,25 @@ class WcSddfInput extends LitElement {
         super();
     }
 
-    _render({state}) {
+    render() {
+        const {state} = this;
+
         return html`
             ${style}
             <app-toolbar>
                 <paper-input
                     autofocus
                     label="Enter name"
-                    on-change=${linkVal(this, "state.input.nameInput")}
+                    @change=${linkVal(this, "state.input.nameInput")}
                     value=${state.input.nameInput}
                     >
                 </paper-input>
                 <paper-checkbox
-                    on-change=${linkChecked(this, "state.input.yesInput")}
-                    checked=${state.input.yesInput}
+                    @change=${linkChecked(this, "state.input.yesInput")}
+                    ?checked=${state.input.yesInput}
                     >
                 </paper-checkbox>
-                <paper-button type="submit" raised on-click=${this.confess.bind(this)}>
+                <paper-button type="submit" raised @click=${this.confess.bind(this)}>
                     Confess
                 </paper-button>
             </app-toolbar>

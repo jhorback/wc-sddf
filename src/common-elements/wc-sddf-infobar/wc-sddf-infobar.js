@@ -14,7 +14,9 @@ class WcSddfInfobar extends LitElement {
         super();
     }
 
-    _render({info}) {
+    render() {
+        const {info} = this;
+
         if (!info) {
             return html``;
         };
@@ -24,7 +26,7 @@ class WcSddfInfobar extends LitElement {
             <app-toolbar>
                 <div class="clear-button">
                     <paper-button
-                        on-click=${this.clearAll.bind(this)}
+                        @click=${this.clearAll.bind(this)}
                         >
                         Clear all
                     </paper-button>

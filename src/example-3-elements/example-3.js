@@ -20,26 +20,28 @@ class Example3 extends LitElement {
         this.state = defaultState;
     }
 
-    _render({state}) {
+    render() {
+        const {state} = this;
+
         return html`
             <example-3-data
                 dbKey="example-3"
-                on-state-changed=${linkProp(this, "state")}
+                @state-changed=${linkProp(this, "state")}
                 >
             </example-3-data>
             <wc-sddf-layout>                
                 <wc-sddf-card cardTitle="Who liked this talk?" showBackButton>
                     
-                    <wc-sddf-input on-confess=${this.confess}
-                        state=${state}
+                    <wc-sddf-input @confess=${this.confess}
+                        .state=${state}
                         >
                     </wc-sddf-input>
                     
-                    <wc-sddf-results results=${state.results}>
+                    <wc-sddf-results .results=${state.results}>
                     </wc-sddf-results>
                     
-                    <wc-sddf-infobar info=${state.infoText}
-                        on-clear-all=${this.clearAll}
+                    <wc-sddf-infobar .info=${state.infoText}
+                        @clear-all=${this.clearAll}
                         >
                     </wc-sddf-infobar>
                     

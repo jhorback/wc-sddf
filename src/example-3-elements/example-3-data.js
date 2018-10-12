@@ -1,15 +1,6 @@
-import {ExampleData} from "../common-elements/example-data";
+import {ExampleData, defaultState} from "../common-elements/example-data";
 import {EventMap} from "../lib/EventMap";
-
-
-export const defaultState = {
-    results: [],
-    infoText: "",
-    input: {
-        nameInput: "",
-        yesInput: false
-    }
-};
+export {defaultState};
 
 
 class Example3Data extends EventMap(ExampleData) {

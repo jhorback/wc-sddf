@@ -1,3 +1,4 @@
+// @ts-nocheck
 import {LitElement, html} from '@polymer/lit-element';
 import {style} from "./wc-sddf-app-css.js";
 import "../common-elements/wc-sddf-layout/wc-sddf-layout.js";
@@ -42,11 +43,13 @@ class WcSddfApp extends LitElement {
         this[propertyName] = state.infoText ? ` - ${pageTitle} ${state.infoText}` : "";
     }
 
-    _render({
-        example1Text,
-        example2Text,
-        example3Text
-    }) {
+    render() {
+        const {
+            example1Text,
+            example2Text,
+            example3Text
+        } = this;
+
         return html`
             ${style}
             <wc-sddf-layout>

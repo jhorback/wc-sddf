@@ -19,26 +19,28 @@ class Example1 extends LitElement {
         this.state = defaultState;
     }
 
-    _render({state}) {
+    render() {
+        const {state} = this;
+
         return html`
             <example-1-data
                 dbKey="example-1"
-                on-state-changed=${this._stateChanged.bind(this)}
+                @state-changed=${this._stateChanged.bind(this)}
                 >
             </example-1-data>
             <wc-sddf-layout>                
                 <wc-sddf-card cardTitle="Who has written a web component?" showBackButton>
                     
-                    <wc-sddf-input on-confess=${this.confess}
-                        state=${state}
+                    <wc-sddf-input @confess=${this.confess}
+                        .state=${state}
                         >
                     </wc-sddf-input>
                     
-                    <wc-sddf-results results=${state.results}>
+                    <wc-sddf-results .results=${state.results}>
                     </wc-sddf-results>
                     
-                    <wc-sddf-infobar info=${state.infoText}
-                        on-clear-all=${this.clearAll}
+                    <wc-sddf-infobar .info=${state.infoText}
+                        @clear-all=${this.clearAll}
                         >
                     </wc-sddf-infobar>
                     
@@ -49,6 +51,7 @@ class Example1 extends LitElement {
 
     confess(event) {
         const {nameInput, yesInput} = event.detail;
+        console.log("dispatch add-confession");
         this.dispatchEvent(new CustomEvent("add-confession", {
             bubbles: true,
             composed: true,

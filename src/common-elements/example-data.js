@@ -1,5 +1,3 @@
-import {EventMap} from "../lib/EventMap.js";
-
 
 export const defaultState = {
     results: [],
@@ -10,7 +8,6 @@ export const defaultState = {
     }
 };
 
-
 export class ExampleData extends HTMLElement {
 
     constructor() {
@@ -18,8 +15,10 @@ export class ExampleData extends HTMLElement {
         this.dbKey = this.getAttribute("dbKey");
         const state = JSON.parse(sessionStorage.getItem(this.dbKey));
         this.state = state || defaultState;
+    }
+
+    connectedCallback() {
         this.dispatchEvent(new CustomEvent("state-changed"));
-        this.disconnectedCallback = undefined;
     }
 
     _addConfession(event) {

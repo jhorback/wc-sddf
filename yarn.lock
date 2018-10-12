@@ -705,12 +705,11 @@
     "@polymer/iron-meta" "^3.0.0-pre.24"
     "@polymer/polymer" "^3.0.0"
 
-"@polymer/lit-element@^0.5.2":
-  version "0.5.2"
-  resolved "https://registry.yarnpkg.com/@polymer/lit-element/-/lit-element-0.5.2.tgz#8d4e2d1ada27cf0f1a38b7b0eb9fadae92eb63df"
+"@polymer/lit-element@^0.6.1":
+  version "0.6.2"
+  resolved "https://registry.yarnpkg.com/@polymer/lit-element/-/lit-element-0.6.2.tgz#589f2fa19e84d23c1debb2c329cbab758ae30581"
   dependencies:
-    "@polymer/polymer" "^3.0.2"
-    lit-html "^0.10.0"
+    lit-html "^0.12.0"
 
 "@polymer/paper-behaviors@^3.0.0-pre.25":
   version "3.0.0-pre.26"
@@ -803,7 +802,7 @@
     "@polymer/paper-styles" "^3.0.0-pre.24"
     "@polymer/polymer" "^3.0.0"
 
-"@polymer/polymer@^3.0.0", "@polymer/polymer@^3.0.2":
+"@polymer/polymer@^3.0.0":
   version "3.0.5"
   resolved "https://registry.yarnpkg.com/@polymer/polymer/-/polymer-3.0.5.tgz#eaa42e70df7de818b5e1839452c82a5f83e39929"
   dependencies:
@@ -946,8 +945,8 @@
     long "^3.2.0"
 
 "@webcomponents/shadycss@^1.2.0":
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/@webcomponents/shadycss/-/shadycss-1.5.0.tgz#109e596027eed04bc5032414c9f094e1aeb9260e"
+  version "1.5.2"
+  resolved "https://registry.yarnpkg.com/@webcomponents/shadycss/-/shadycss-1.5.2.tgz#ad72f43000c39ba4ac61e625131f34f4b7cfe55f"
 
 "@webcomponents/webcomponentsjs@^2.1.1":
   version "2.1.1"
@@ -3301,9 +3300,13 @@ lcid@^1.0.0:
   dependencies:
     invert-kv "^1.0.0"
 
-lit-html@^0.10.0:
-  version "0.10.2"
-  resolved "https://registry.yarnpkg.com/lit-html/-/lit-html-0.10.2.tgz#53c846afcf91bb1e6623179ef22e327ab8ac0e0e"
+lit-html@^0.11.4:
+  version "0.11.4"
+  resolved "https://registry.yarnpkg.com/lit-html/-/lit-html-0.11.4.tgz#fa397d2b2f2d0523ebc136e5a1699aa4e9346152"
+
+lit-html@^0.12.0:
+  version "0.12.0"
+  resolved "https://registry.yarnpkg.com/lit-html/-/lit-html-0.12.0.tgz#d994420fda74744f9d4a79401b086de929643e6a"
 
 load-json-file@^1.0.0:
   version "1.1.0"

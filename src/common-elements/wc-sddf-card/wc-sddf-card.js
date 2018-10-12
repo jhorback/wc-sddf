@@ -20,7 +20,9 @@ class WcSddfCard extends LitElement {
         this.showBackButton = false;
     }
 
-    _render({cardTitle, showBackButton}) {
+    render() {
+        const {cardTitle, showBackButton} = this;
+        
         return html`
             ${style}
             <div class="content">
@@ -29,7 +31,7 @@ class WcSddfCard extends LitElement {
                         <app-toolbar>
                             ${showBackButton
                                 ? html `
-                                    <paper-icon-button icon="arrow-back" on-click=${this.goBack}></paper-icon-button>
+                                    <paper-icon-button icon="arrow-back" @click=${this.goBack}></paper-icon-button>
                                 `
                                 : ``
                             }
