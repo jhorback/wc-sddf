@@ -75,4 +75,4 @@ export class ExampleData extends HTMLElement {
     }
 }
 
-// customElements.define('example-1-data', ExampleData);
+// customElements.define('example-data', ExampleData);

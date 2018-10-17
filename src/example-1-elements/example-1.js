@@ -66,12 +66,9 @@ class Example1 extends LitElement {
     }
 
     _stateChanged(event) {
-        const fromEl = event.currentTarget;
-        
-        // use a setTimeout here since etting properties in response
-        // to other properties changing considered harmful.
+        const {state} = event.currentTarget;
         setTimeout(() => {
-            this.state = fromEl.state;
+            this.state = state;
         });
     }
 }
