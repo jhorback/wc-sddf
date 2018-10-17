@@ -705,11 +705,11 @@
     "@polymer/iron-meta" "^3.0.0-pre.24"
     "@polymer/polymer" "^3.0.0"
 
-"@polymer/lit-element@^0.6.1":
-  version "0.6.2"
-  resolved "https://registry.yarnpkg.com/@polymer/lit-element/-/lit-element-0.6.2.tgz#589f2fa19e84d23c1debb2c329cbab758ae30581"
+"@polymer/lit-element@0.6.1":
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/@polymer/lit-element/-/lit-element-0.6.1.tgz#56772f8fb0c6d3d73a20a6d17f3bc82ec648664b"
   dependencies:
-    lit-html "^0.12.0"
+    lit-html "^0.11.4"
 
 "@polymer/paper-behaviors@^3.0.0-pre.25":
   version "3.0.0-pre.26"
@@ -3303,10 +3303,6 @@ lcid@^1.0.0:
 lit-html@^0.11.4:
   version "0.11.4"
   resolved "https://registry.yarnpkg.com/lit-html/-/lit-html-0.11.4.tgz#fa397d2b2f2d0523ebc136e5a1699aa4e9346152"
-
-lit-html@^0.12.0:
-  version "0.12.0"
-  resolved "https://registry.yarnpkg.com/lit-html/-/lit-html-0.12.0.tgz#d994420fda74744f9d4a79401b086de929643e6a"
 
 load-json-file@^1.0.0:
   version "1.1.0"

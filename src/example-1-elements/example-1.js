@@ -51,7 +51,6 @@ class Example1 extends LitElement {
 
     confess(event) {
         const {nameInput, yesInput} = event.detail;
-        console.log("dispatch add-confession");
         this.dispatchEvent(new CustomEvent("add-confession", {
             bubbles: true,
             composed: true,
