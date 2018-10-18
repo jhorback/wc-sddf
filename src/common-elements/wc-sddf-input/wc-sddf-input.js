@@ -26,13 +26,13 @@ class WcSddfInput extends LitElement {
                 <paper-input
                     autofocus
                     label="Enter name"
-                    @change=${linkVal(this, "state.input.nameInput")}
                     value=${state.input.nameInput}
+                    @change=${linkVal(this, "state.input.nameInput")}                    
                     >
                 </paper-input>
                 <paper-checkbox
-                    @change=${linkChecked(this, "state.input.yesInput")}
                     ?checked=${state.input.yesInput}
+                    @change=${linkChecked(this, "state.input.yesInput")}
                     >
                 </paper-checkbox>
                 <paper-button type="submit" raised @click=${this.confess.bind(this)}>
